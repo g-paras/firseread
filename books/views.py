@@ -43,9 +43,11 @@ def home_view(request):
     return render(request, 'home.html', {'books':books, 'favs':favs})
 
 def fav_view(request):
-    user = request.user
-    favs = Favourite.objects.filter(user=user)
-    return render(request, "favourite.html", {'favs': favs})
+    if request.user.is_authenticated:
+        user = request.user
+        favs = Favourite.objects.filter(user=user)
+        return render(request, "favourite.html", {'favs': favs})
+    return redirect('login')
 
 def add_to_fav(request, isbn):
     if request.user.is_authenticated:
