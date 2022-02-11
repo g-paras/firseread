@@ -13,6 +13,7 @@ class Book(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+
 class Favourite(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -2,6 +2,7 @@ from .models import Book
 
 import pandas as pd
 
+
 def main():
     df = pd.read_csv("dataset.csv")
     # print(df.shape)

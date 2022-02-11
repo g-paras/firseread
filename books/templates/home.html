@@ -17,7 +17,7 @@
       >
         <a
           class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-          href="/books/"
+          href="/"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,13 +48,13 @@
         {% if user.is_authenticated %}
         <a
         class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-        href="/books/logout/"
+        href="/accounts/logout/"
       >
         Logout
         {% else %}
         <a
           class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-          href="/books/login/"
+          href="/accounts/login/"
         >
           Login
           {% endif %}
