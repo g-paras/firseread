@@ -1,1 +1,1 @@
-web: firseread.wsgi
+web: gunicorn firseread.wsgi
