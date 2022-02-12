@@ -11,9 +11,12 @@ class Book(models.Model):
     category = models.CharField(max_length=50)
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.name} {self.author}"
 
 
 class Favourite(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.book.name}, {self.user.username}"
